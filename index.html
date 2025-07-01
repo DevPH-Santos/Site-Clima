@@ -12,17 +12,28 @@
 <body>
 
     <main>
-
+        
         <header>
-
+            
             <input type="text" id="input_cidade" placeholder="Digite sua localização">
             <button type="submit" id="btn_cidade"><i class="fa-solid fa-magnifying-glass"></i></button>
-
+            
         </header>
+        
+        <div class="erro">
+
+            <div>
+                <h1>ERRO!</h1>
+                <p>Por favor, preencha o campo para continuar sua busca</p>
+            </div>
+
+            <button id="btn_erro">OK</button>
+
+        </div>
 
         <div class="container">
 
-            <h1 class="cidade" id="cidade">Jaguariúna - SP</h1>
+            <h1 class="cidade" id="txt_cidade"></h1>
 
             <section>
 
@@ -30,15 +41,13 @@
 
                     <img src="" class="img_previsao" id="img_previsao" alt="Imagem do clima atual">
 
-                    <h1 id="tempC">X°C</h1>
+                    <h1 id="tempC"></h1>
 
                 </div>
 
                 <div class="detalhes" id="detalhes">
 
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia veniam dignissimos ad omnis
-                        molestiae quisquam fugiat quas repellat, vero dolor atque magni odio, porro, provident
-                        perferendis fugit ducimus! Nostrum?</p>
+                    <p style="font-weight: bold; text-transform: uppercase;" id="info_detalhes"></p>
 
                 </div>
 
@@ -54,6 +63,8 @@
         </div>
 
     </main>
+
+    <script src="js/script.js"></script>
 
 </body>
 

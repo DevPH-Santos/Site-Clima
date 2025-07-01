@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,47 +9,74 @@
     outline: none;
 }
 
-body{
+:root {
+    --principal_clara: #0071e2;
+    --principal_escura: #064789;
+    --cinza: #EBF2FA;
+}
+
+body {
     height: 100vh;
     width: 100%;
-    background-color: #064789;
+    background-color: var(--principal_escura);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main{
+main {
     border-radius: 20px;
     display: flex;
+    gap: 20px;
+    width: 500px;
     flex-direction: column;
-    padding: 15px;
-    background-color: white;
+    padding: 20px;
+    background-color: var(--cinza);
 }
 
-main header{
+main header {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     gap: 15px;
-    flex-grow: 1;
 }
 
-main header input{
-    width: 300px;
+.erro {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+    color: red;
+    animation: erro 1s linear;
+}
+
+.erro button {
+    color: white;
+    background-color: var(--principal_clara);
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+main header input {
+    width: 100%;
     padding: 10px 15px;
     font-size: 16.5px;
     border-radius: 20px;
     color: #000000;
-    background-color: #EBF2FA;
+    background-color: white;
 }
 
-main header input::placeholder{
+main header input::placeholder {
     color: #000000;
 }
 
-main header button{
-    color: #064789;
+#btn_cidade {
+    color: var(--principal_clara);
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px 15px;
@@ -60,7 +87,72 @@ main header button{
     transition: all 0.5s ease;
 }
 
-main header button:hover{
+#btn_cidade:hover {
     color: #ffffff;
-    background-color: #064789;
+    background-color: var(--principal_clara);
+}
+
+.container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--principal_clara);
+    color: white;
+    border-radius: 20px;
+    gap: 35px;
+    padding: 20px;
+}
+
+.container h1 {
+    text-transform: uppercase;
+}
+
+.container section {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.previsao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.previsao h1 {
+    font-size: 40px;
+}
+
+.detalhes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 80%;
+}
+
+@keyframes erro {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        width: fit-content;
+        padding: 15px;
+    }
+
+    .container{
+        padding: 15px;
+        width: fit-content;
+    }
 }
