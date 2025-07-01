@@ -3,11 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Site Clima</title>
 </head>
 <body>
 
-    
+    <main>
+
+        <header>
+
+            <form>
+
+                <input type="text" id="input_cidade" placeholder="Digite o nome da Cidade">
+                <button type="submit" id="btn_cidade">Procurar</button>
+
+            </form>
+
+        </header>
+
+        <div class="container">
+
+            <h1 class="cidade" id="cidade">Jaguariúna - SP</h1>
+
+            <section>
+
+                <div class="previsao">
+
+                    <img src="" class="img_previsao" id="img_previsao" alt="Imagem do clima atual">
+
+                    <h1 id="tempC">X°C</h1>
+
+                </div>
+
+                <div class="detalhes" id="detalhes">
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia veniam dignissimos ad omnis molestiae quisquam fugiat quas repellat, vero dolor atque magni odio, porro, provident perferendis fugit ducimus! Nostrum?</p>
+
+                </div>
+
+            </section>
+
+            <div class="info">
+
+                <p id="vento" class="vento"></p>
+                <p id="umidade" class="umidade"></p>
+
+            </div>
+
+        </div>
+
+    </main>
     
 </body>
 </html>
