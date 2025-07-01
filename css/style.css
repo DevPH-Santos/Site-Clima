@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
 }
 
 body{
@@ -14,4 +16,51 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+main{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: white;
+}
+
+main header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+main header input{
+    width: 300px;
+    padding: 10px 15px;
+    font-size: 16.5px;
+    border-radius: 20px;
+    color: #000000;
+    background-color: #EBF2FA;
+}
+
+main header input::placeholder{
+    color: #000000;
+}
+
+main header button{
+    color: #064789;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+main header button:hover{
+    color: #ffffff;
+    background-color: #064789;
 }
