@@ -148,11 +148,11 @@ main header input::placeholder {
 @media screen and (max-width: 600px) {
     main{
         width: fit-content;
-        padding: 15px;
+        padding: 0;
     }
 
     .container{
-        padding: 15px;
+        padding: 10px;
         width: fit-content;
     }
 }
