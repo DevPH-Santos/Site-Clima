@@ -1,6 +1,5 @@
 const api = "d848df7a4fa258a0adf87596dac29022"
 
-
 //variaveis executaveis
 const botao = document.getElementById('btn_cidade')
 const btn_erro = document.getElementById('btn_erro')
@@ -14,6 +13,15 @@ const info_detalhes = document.getElementById('info_detalhes')
 const vento = document.getElementById('vento')
 const umidade = document.getElementById('umidade')
 const txt_cidade = document.getElementById('txt_cidade')
+
+// Adicionando event listener para o Enter no input
+const inputCidade = document.getElementById('input_cidade')
+inputCidade.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' && inputCidade.value.trim().length > 0) {
+        // Simula o clique no botão se o campo estiver preenchido
+        botao.click();
+    }
+});
 
 botao.addEventListener('click', function () {
 
@@ -29,11 +37,11 @@ botao.addEventListener('click', function () {
             erro.style.display = 'none'
             container.style.display = 'flex'
             document.getElementsByTagName('header')[0].style.display = 'flex'
-
-            
         })
         
         return
+        
+    }else{
         
     }
 
